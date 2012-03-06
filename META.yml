@@ -22,7 +22,7 @@ requires:
 resources:
   homepage: https://github.com/Hercynium/Devel-Valgrind-Massif-OutputParser
   repository: https://github.com/Hercynium/Devel-Valgrind-Massif-OutputParser.git
-version: 0.0.0_001
+version: 0.0.0_2
 x_Dist_Zilla:
   plugins:
     -
@@ -30,13 +30,17 @@ x_Dist_Zilla:
       name: PodWeaver
       version: 3.101641
     -
+      class: Dist::Zilla::Plugin::Git::Check
+      name: '@Filter/Check'
+      version: 1.120370
+    -
       class: Dist::Zilla::Plugin::Git::Tag
       name: '@Filter/Tag'
       version: 1.120370
     -
-      class: Dist::Zilla::Plugin::Author::YANICK::NextSemanticVersion
-      name: Author::YANICK::NextSemanticVersion
-      version: 0.7.0
+      class: Dist::Zilla::Plugin::Git::NextVersion
+      name: Git::NextVersion
+      version: 1.120370
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: '@Basic/GatherDir'
