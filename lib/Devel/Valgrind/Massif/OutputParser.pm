@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Devel::Valgrind::Massif::OutputParser;
 {
-  $Devel::Valgrind::Massif::OutputParser::VERSION = '0.0.0_2';
+  $Devel::Valgrind::Massif::OutputParser::VERSION = '0.0.0_3';
 }
 {
   $Devel::Valgrind::Massif::OutputParser::DIST = 'Devel-Valgrind-Massif-OutputParser';
@@ -143,7 +143,7 @@ Devel::Valgrind::Massif::OutputParser - Parse the output from massif just like m
 
 =head1 VERSION
 
-version 0.0.0_2
+version 0.0.0_3
 
 =head1 SYNOPSIS
 

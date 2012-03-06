@@ -7,6 +7,8 @@ use Module::Build 0.3601;
 
 my %module_build_args = (
   "build_requires" => {
+    "File::Find" => 0,
+    "File::Temp" => 0,
     "Module::Build" => "0.3601",
     "Test::More" => 0
   },
@@ -19,7 +21,7 @@ my %module_build_args = (
     "Stephen R. Scaffidi <sscaffidi\@cpan.org>"
   ],
   "dist_name" => "Devel-Valgrind-Massif-OutputParser",
-  "dist_version" => "0.0.0_2",
+  "dist_version" => "0.0.0_3",
   "license" => "perl",
   "module_name" => "Devel::Valgrind::Massif::OutputParser",
   "recommends" => {},

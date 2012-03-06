@@ -12,6 +12,8 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "Parse the output from massif just like msparser.py",
   "AUTHOR" => "Stephen R. Scaffidi <sscaffidi\@cpan.org>",
   "BUILD_REQUIRES" => {
+    "File::Find" => 0,
+    "File::Temp" => 0,
     "Module::Build" => "0.3601",
     "Test::More" => 0
   },
@@ -28,7 +30,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.0.0_2",
+  "VERSION" => "0.0.0_3",
   "test" => {
     "TESTS" => "t/*.t"
   }
