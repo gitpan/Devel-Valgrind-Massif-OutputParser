@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Devel::Valgrind::Massif::OutputParser;
 {
-  $Devel::Valgrind::Massif::OutputParser::VERSION = '0.0.0_3';
+  $Devel::Valgrind::Massif::OutputParser::VERSION = '0.005';
 }
 {
   $Devel::Valgrind::Massif::OutputParser::DIST = 'Devel-Valgrind-Massif-OutputParser';
@@ -101,9 +101,9 @@ sub _make_heap_node {
   # save the info
   return {
     num_children => $num_children,
-    #raw_line     => $line,
     children     => [],
     nbytes       => $bytes,
+    raw_details  => $details,
     details      => (!$addr ? undef : {
       address  => $addr,
       function => $func,
@@ -143,7 +143,7 @@ Devel::Valgrind::Massif::OutputParser - Parse the output from massif just like m
 
 =head1 VERSION
 
-version 0.0.0_3
+version 0.005
 
 =head1 SYNOPSIS
 
